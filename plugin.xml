@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova.plugin.WPlugin" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<name>WPlugin</name>
+<js-module name="WPlugin" src="www/WPlugin.js">
+<clobbers target="cordova.plugins.WPlugin" />
+</js-module>
+<platform name="android">
+<config-file parent="/*" target="res/xml/config.xml"><feature name="WPlugin">
+<param name="android-package" value="cordova.plugin.WPlugin.WPlugin" />
+</feature>
+</config-file>
+<config-file parent="/*" target="AndroidManifest.xml"></config-file>
+<source-file src="src/android/WPlugin.java" target-dir="src/cordova/plugin/WPlugin/WPlugin" />
+</platform>
+</plugin>
